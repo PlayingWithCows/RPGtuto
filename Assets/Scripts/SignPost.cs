@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SignPost : ActionItem {
 
+public class SignPost : ActionItem {
+	
+	public string[] dialogue;
 	public override void Interact()
 	{
-		//base.Interact ();
+		DialogueSystem.Instance.AddNewDialogue (dialogue, "Sign");
 		Debug.Log ("Interacting with Sign Post");
 	}
 
